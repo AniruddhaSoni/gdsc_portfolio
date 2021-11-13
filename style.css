@@ -1,0 +1,245 @@
+:root {
+  --light_gray: #333333;
+  --dark_gray: #252525;
+  --sky_blue: #30b1ba;
+  --sky_blue_light: #8bd3d8;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "roboto", sans-serif;
+}
+a {
+  color: white;
+}
+li {
+  list-style: none;
+}
+
+header > nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--light_gray);
+  z-index: 2;
+}
+header > nav > ul {
+  margin: 0 auto;
+  padding: 32px 0px;
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+header > nav > ul > li > a {
+  color: var(--sky_blue);
+  font-size: 32px;
+  font-weight: 600;
+  border-bottom: 3px solid transparent;
+  transition: border 0.5s ease, color 0.5s ease;
+}
+header > nav > ul > li:hover > a {
+  border-bottom: 3px solid var(--sky_blue);
+  color: white;
+}
+/*------------------home----------------------*/
+.home {
+  max-height: 100vh;
+  background-color: var(--light_gray);
+}
+.hero_container {
+  width: 840px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 420px 420px;
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.info > * {
+  margin: 10px 0;
+  line-height: 32px;
+}
+.info > .intro {
+  color: white;
+  font-size: 32px;
+  font-weight: 500;
+}
+.info > .name {
+  font-size: 40px;
+  color: var(--sky_blue);
+  font-weight: 500px;
+}
+.info > .position {
+  color: white;
+  font-size: 32px;
+  font-weight: 500;
+}
+.resume {
+  margin-top: 30px;
+  height: 48px;
+  width: 160px;
+  background-color: var(--sky_blue);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.resume > a {
+  font-size: 20px;
+  color: black;
+  font-weight: 400;
+}
+/* ----------------home--------------- */
+.quote_container {
+  position: relative;
+  width: 100%;
+}
+.quote {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -70%);
+  width: 900px;
+  height: 200px;
+  background-color: var(--light_gray);
+  box-shadow: 3px 2px 4px 7px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quote > blockquote {
+  color: white;
+  font-size: 40px;
+  font-weight: 600;
+}
+/* -------------------about---------------------- */
+.about {
+  background-color: var(--dark_gray);
+  min-height: 100vh;
+  padding-top: 100px;
+}
+.heading {
+  width: 100%;
+  text-align: center;
+}
+.heading > h1 {
+  color: var(--sky_blue);
+  font-size: 64px;
+}
+.about_desc {
+  background-color: var(--light_gray);
+  width: 900px;
+  padding: 48px 64px;
+  color: white;
+  margin: 30px auto;
+  font-size: 18px;
+  line-height: 38px;
+  border-radius: 15px;
+}
+.skills {
+  padding-bottom: 60px;
+}
+.skills h1 {
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.skills_container {
+  margin: 0 auto;
+  max-width: 900px;
+  display: grid;
+  gap: 30px 60px;
+  grid-template-columns: auto auto;
+  grid-template-rows: 134px 134px;
+}
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 15px;
+  background-color: var(--light_gray);
+}
+.skill h2 {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.progressbar_container {
+  background-color: white;
+  width: 80%;
+  border-radius: 15px;
+}
+.progress_bar {
+  background-color: var(--sky_blue_light);
+  color: white;
+  padding: 1%;
+  text-align: right;
+  font-size: 20px;
+  border-radius: 15px;
+}
+.skill_1 {
+  width: 70%;
+}
+/* -----------------------project----------------------- */
+.projects {
+  max-height: 100vh;
+  background-color: var(--light_gray);
+  padding-bottom: 110px;
+}
+.projects > .heading {
+  padding: 32px 0px;
+}
+.project_container {
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin: 0 auto;
+  gap: 20px;
+  color: white;
+}
+.project {
+  position: relative;
+  background-color: var(--dark_gray);
+  height: 540px;
+  border-radius: 15px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project_img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+.project_title {
+  font-size: 30px;
+  margin: 16px;
+}
+.project_desc {
+  font-size: 20px;
+}
+.explore_more {
+  position: absolute;
+  bottom: 18px;
+  height: 48px;
+  padding: 10px;
+  border-radius: 15px;
+  color: black;
+  background-color: var(--sky_blue);
+  font-size: 24px;
+}
